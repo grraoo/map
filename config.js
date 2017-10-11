@@ -1,15 +1,16 @@
 var regions = {
   irkutsk: {
     name: "г. Иркутск",
+    regName: "Иркутская область",
     bubble: {
       hostel: {
         href: '#',
-        linkText: 'Иркутский хостел',
+        linkText: 'Хостел  &laquo;Иркутские Берега&raquo;',
         text: 'Информация про иркутский хостел Lorem ipsum dolor sit amet consectetur adipisicing elit. Et est esse optio porro alias consequuntur, accusamus exercitationem sed harum non.'
       },
       apart: {
         href: '#',
-        linkText: 'Иркутский апарт-отель',
+        linkText: 'Апарт-отель &laquo;Иркутские Берега&raquo;',
         text: 'Информация про иркутский апарт-отель Lorem ipsum dolor sit amet consectetur adipisicing elit. Et est esse optio porro alias consequuntur, accusamus exercitationem sed harum nonLorem ipsum dolor sit amet consectetur adipisicing elit. Et est esse optio porro alias consequuntur, accusamus .'
       }
     }
@@ -230,7 +231,7 @@ var regions = {
       apart: {
         href: '#',
         linkText: 'Ленинградский апарт-отель',
-        text: 'Информация про Ленинградский апарт-отель Lorem ipsum dolor sit amet consectetur adipisicing elit. Et est esse optio porro alias consequuntur, accusamus exercitationem sed harum nonLorem ipsum dolor sit amet consectetur adipisicing elit. Et est esse optio porro alias consequuntur, accusamus .'
+        text: 'Информация про Ленинградский апарт-отель Lorem ipsum dolor sit amet consectetur adipisicing elit. Et est esse optio porro alias consequuntur, accusamus exercitationem sed harum nonLorem ipsum dolor sit amet consectetur adipisicing elit. Et est esse optio porro alias consequuntur, accusamus.'
       },
       hostel: {
         href: '#',
@@ -267,12 +268,12 @@ path.onclick = function (e) {
     curReg = regions[regId];
     curPath.classList.add('active-region');
     bubble.querySelector('.bubble__link--apart').href = curReg.bubble.apart.href;
-    bubble.querySelector('.bubble__link--apart').innerText = curReg.bubble.apart.linkText;
-    bubble.querySelector('.bubble__info--apart').innerText = curReg.bubble.apart.text;
+    bubble.querySelector('.bubble__link--apart').innerHTML = curReg.bubble.apart.linkText;
+    bubble.querySelector('.bubble__info--apart').innerHTML = curReg.bubble.apart.text;
     bubble.querySelector('.bubble__link--hostel').href = curReg.bubble.hostel.href;
-    bubble.querySelector('.bubble__link--hostel').innerText = curReg.bubble.hostel.linkText;
-    bubble.querySelector('.bubble__info--hostel').innerText = curReg.bubble.hostel.text;
-    bubble.querySelector('.bubble__name').innerText = curReg.name;
+    bubble.querySelector('.bubble__link--hostel').innerHTML = curReg.bubble.hostel.linkText;
+    bubble.querySelector('.bubble__info--hostel').innerHTML = curReg.bubble.hostel.text;
+    bubble.querySelector('.bubble__name').innerHTML = curReg.name;
 
     bubble.removeAttribute('hidden');
 
