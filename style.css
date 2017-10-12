@@ -54,6 +54,7 @@
 
     svg {
       height: 90vh;
+      width: auto;
       margin: 0 auto;
       display: block;
     }
